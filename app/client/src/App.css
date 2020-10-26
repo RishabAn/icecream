@@ -1,3 +1,15 @@
 .App {
   text-align: center;
 }
+.yellow {
+  border-bottom: 1px solid yellowgreen;
+}
+.blue {
+  color:lightblue;
+}
+.purple {
+  color:lightpink;
+}
+.flex {
+  display:flex;
+}
