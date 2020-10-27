@@ -5,10 +5,10 @@
   border-bottom: 1px solid yellowgreen;
 }
 .blue {
-  color:lightblue;
+  color:blue;
 }
 .purple {
-  color:lightpink;
+  color:darkred;
 }
 .flex {
   display:flex;

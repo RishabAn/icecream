@@ -4,14 +4,7 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    response: [
-      {
-        name: "",
-        address: "",
-        review: "",
-        username: "",
-      },
-    ],
+    response: [{ id: "", name: "", address: "", review: "", username: "" }],
   };
 
   componentDidMount() {
@@ -27,6 +20,7 @@ class App extends Component {
     var array = [];
     body.forEach((element) => {
       var obj = {};
+      obj.id = element.id;
       obj.name = element.name;
       obj.address = element.location.address1 + element.location.city;
       obj.review = element.review;
@@ -45,7 +39,7 @@ class App extends Component {
         <div>
           {this.state.response.map((item) => {
             return (
-              <div className="yellow">
+              <div key={item.id} className="yellow">
                 <div className="flex">
                   <p className="blue">Business Name: </p>
                   <p className="purple">{item.name}</p>
